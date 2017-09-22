@@ -6,9 +6,9 @@
 
   = comment.body
 
-  -# - if can? :update, comment
-  -#   %span.post-buttons
-  -#     = link_to "Edit", edit_post_comment_path
+  - if can? :update, comment
+    %span.post-buttons
+      = link_to "Edit", edit_post_comment_path(comment.post, comment)
 
   - if can? :destroy, comment
     %span.post-buttons
