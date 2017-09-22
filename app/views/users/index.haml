@@ -1,0 +1,6 @@
+%main.container
+  %article
+    - @users.each do |user|
+
+      %p= link_to user.email, user_path(user)
+      %br
