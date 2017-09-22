@@ -1,0 +1,28 @@
+-# = @user.email
+-# %br
+-# %br
+-#
+-# %p Posted:
+-#
+-# - @user.posts.each do |post|
+-#   %br
+-#   %br
+-#   = link_to post.body, post
+
+%main.container
+  %h1.user-posts Posts by:
+  %p= @user.email
+  / Всички постове на потребителя един след друг
+  - @user.posts.each do |post|
+    %article
+      %span
+        %a{:href => "#"} Author
+      %span Time posted
+        %p= post.created_at.strftime('%A, %B %d')
+
+      %span.show-post
+        %a{:href => ""}
+          Open post
+        %br
+        %br
+        = link_to post.body, post

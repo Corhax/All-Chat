@@ -1,0 +1,151 @@
+body {
+	background: url("index.jpg") no-repeat fixed center;
+	background-size: cover;
+	overflow-x: hidden;
+	font-family: 'Exo 2', sans-serif;
+	padding-top: 70px;
+}
+
+nav {
+	background-image: url("nav.jpg");
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	height: 40px;
+	font-size: 24px;
+}
+
+nav input {
+	border: none;
+	background-color: white;
+	font: 20px 'Exo 2', sans-serif;
+	padding-left: 5px;
+	width: 300px;
+}
+
+a {
+	border-radius: 5%;
+	text-decoration: none;
+	padding: 5px;
+}
+
+nav a:link, nav a:visited{
+	color: #66CCFF;
+}
+
+nav a:hover {
+	background-color: #091f8f;
+}
+
+ul li {
+	padding-left: 10px;
+	list-style-type: none;
+	display: inline-block;
+}
+
+#left-nav {
+	float: left;
+	margin: 0;
+}
+
+#right-nav {
+	margin: 0;
+	float: right;
+	padding-right: 20px;
+}
+
+#avatar {
+	width: 30px;
+	height: 30px;
+}
+
+#logout {
+	background-color: inherit;
+}
+
+main {
+	background-color: white;
+	padding: 10px;
+	border-radius: 2px;
+}
+
+.container {
+	margin: auto;
+	width: 60%;
+}
+
+article {
+	border: 1px solid black;
+	border-radius: 1%;
+	font-size: 30px;
+	margin: 10px;
+	padding: 5px;
+}
+
+article span {
+	margin-right: 10px;
+	font-size: 20px;
+}
+
+article a:link, article a:visited, .comment a:link, .comment a:visited {
+	color: black;
+}
+
+article p {
+	margin: 10px 0;
+}
+
+.count {
+	margin-left: 10px;
+	font-size: 18px;
+}
+
+.comment {
+	border: 1px solid black;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 5px;
+}
+
+.comment p {
+	margin-top: 10px;
+}
+
+.comment span {
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.post-buttons {
+	cursor: pointer;
+	float: right;
+	padding: 10px;
+}
+
+.post-buttons a:hover{
+	background-color: #eee;
+}
+
+input[type="text"] {
+	display: block;
+	margin: 10px;
+	font: 18px 'Exo 2', sans-serif;
+	width: 97%;
+}
+
+input[type="submit"] {
+	font: 16px 'Exo 2', sans-serif;
+	margin-left: 10px;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+}
+
+footer p {
+	font-size: 24px;
+	color: blue;
+}

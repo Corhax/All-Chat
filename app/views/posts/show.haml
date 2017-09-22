@@ -1,0 +1,49 @@
+-# = @post.body
+-# %br
+-# %p posted by:
+-# = link_to @post.user.email, user_path(@post.user)
+-# %br
+-#
+-# = render @post.comments
+-#
+-# %br
+-# %br
+-#
+-# %h3 Add Comments:
+-#
+-# = render 'comments/form'
+-# %br
+-# %br
+-#
+-# - if can? :update, @post
+-#   = link_to "Edit", edit_post_path(@post)
+-#
+-# - if can? :destroy, @post
+-#   = link_to "Delete", post_path(@post),
+-#     method: :delete, data: { confirm: "Are you sure" }
+
+
+%main.container
+  %article
+    %span
+      = link_to @post.user.email, user_path(@post.user)
+    %span Time posted
+    %br
+    = @post.body
+
+  %div
+    %span.count
+      = @post.comments.count
+      = render @post.comments
+
+    #make-comment
+    = render 'comments/form'
+
+    - if can? :update, @post
+      %span.post-buttons
+        = link_to "Edit", edit_post_path(@post)
+
+    - if can? :destroy, @post
+      %span.post-buttons
+        = link_to "Delete", post_path(@post),
+          method: :delete, data: { confirm: "Are you sure" }
