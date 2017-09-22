@@ -1,5 +1,5 @@
 body {
-	background: url("background/index.jpg") no-repeat fixed center;
+	background: image-url("background/index.jpg") no-repeat fixed center;
 	background-size: cover;
 	overflow-x: hidden;
 	font-family: 'Exo 2', sans-serif;
@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-	background-image: url("background/nav.jpg");
+	background-image: image-url("background/nav.jpg");
 	position: fixed;
 	top: 0;
 	left: 0;
