@@ -4,4 +4,14 @@
   %p= f.text_area :body
   %br
 
+  - if can? :update, @post
+    %span.post-buttons
+      = link_to "Edit", edit_post_path(@post)
+
+  - if can? :destroy, @post
+    %span.post-buttons
+      = link_to "Delete", post_path(@post),
+        method: :delete, data: { confirm: "Are you sure" }
+
+
   %p= f.submit
