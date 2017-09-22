@@ -16,13 +16,12 @@
   - @user.posts.each do |post|
     %article
       %span
-        %a{:href => "#"} Author
-      %span Time posted
-      %p= post.created_at.strftime('%A, %B %d')
+        =@user.email
+      %span= post.created_at.strftime('%A, %B %d')
+      %br
 
       %span.show-post
-        %a{:href => ""}
-          Open post
+        = link_to "Open Post", post
         %br
         %br
-        = link_to post.body, post
+        = post.body
