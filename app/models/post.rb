@@ -5,6 +5,6 @@ class Post < ApplicationRecord
 
   def self.keyword_search(keywords)
     keywords = "%" + keywords + "%"
-    Post.where("body LIKE ?", keywords)
+    Post.where("body ILIKE ?", keywords)
   end
 end
