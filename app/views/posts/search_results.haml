@@ -1,0 +1,20 @@
+%main.container
+  %h2
+    Search Results for '#{params[:search_keywords]}'
+  = params[:search_keywords]
+
+  -if @found_posts.empty?
+    %p No results found.
+
+  - @found_posts.each do |post|
+    %article
+      %span
+        = link_to post.user.email, user_path(post.user)
+        %span= post.created_at.strftime('%A, %B %d')
+        %br
+        = link_to post.body, post_path(post)
+
+
+
+%footer
+  %p Some Footer EOOD 2017

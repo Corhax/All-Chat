@@ -17,6 +17,13 @@ class PostsController < ApplicationController
   def show
   end
 
+  def search
+  end
+
+  def search_results
+    @found_posts = Post.keyword_search(params[:search_keywords])
+  end
+
   def edit
     authorize! :update, @post
   end

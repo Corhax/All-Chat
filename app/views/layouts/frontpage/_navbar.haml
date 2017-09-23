@@ -2,7 +2,7 @@
   %nav.navbar
     %ul#left-nav
       %li
-        %input{:name => "search", :type => "text", :value => "Search..."}/
+        = render 'posts/search'
       %li
         = link_to "Home", root_path
       %li
