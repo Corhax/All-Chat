@@ -9,9 +9,12 @@
 -#   %br
 -#   = link_to post.body, post
 
+
 %main.container
   %h1.user-posts Posts by:
   %p= @user.email
+  -if current_user == @user
+    %p= link_to "Edit profile", edit_user_registration_path
   / Всички постове на потребителя един след друг
   - @user.posts.each do |post|
     %article
@@ -19,9 +22,9 @@
         =@user.email
       %span= post.created_at.strftime('%A, %B %d')
       %br
+      = post.body
 
       %span.show-post
         = link_to "Open Post", post
         %br
         %br
-        = post.body
