@@ -10,7 +10,7 @@
 
     %ul#right-nav
       %li
-        = link_to current_user.first_name, root_path
+        = link_to current_user.first_name, user_path(current_user)
       %li
         %a{:href => "#"}
           %img#avatar{:alt => "avatar", :src => ""}/
