@@ -1,0 +1,117 @@
+main {
+	background-color: white;
+	padding: 10px;
+	border-radius: 2px;
+}
+
+.container {
+	margin: auto;
+	width: 60%;
+}
+
+/*Стилове за поста*/
+article {
+	border: 1px solid black;
+	border-radius: 1%;
+	font-size: 30px;
+	margin: 10px;
+	padding: 5px;
+}
+
+.post-info {
+	height: 40px;
+	background-color: #7d7d7d;
+	border-bottom: 4px solid darkred;
+	clear: both;
+}
+
+span {
+	display: block;
+	margin-right: 10px;
+	font-size: 22px;
+	padding: 5px;
+}
+
+.author {
+	float: left;
+}
+
+.time {
+	float: right;
+}
+
+article a:link, article a:visited, .comment a:link, .comment a:visited {
+	color: black;
+}
+
+article p {
+	margin: 10px 0;
+}
+
+/*Стилове за коментарите*/
+
+figure {
+	margin: 0;
+	float: left;
+}
+
+figure img {
+	width: 80px;
+	height: 80px;
+	background-color: darkred;
+}
+
+.comment-info {
+	height: 40px;
+	background-color: #7d7d7d;
+	border-bottom: 4px solid darkred;
+    overflow: hidden;
+}
+
+.comment {
+	border: 1px solid black;
+	margin: 0 10px 20px 10px;
+	padding: 5px;
+	min-height: 80px;
+}
+
+.comment p {
+	margin-top: 10px;
+	padding-left: 5px;
+	display: block;
+    overflow: hidden;
+}
+
+.comment span {
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+/*Стилове за бутоните за промяна на коментара*/
+.post-buttons {
+	display: inline;
+	cursor: pointer;
+	padding: 10px;
+}
+
+.post-buttons a:hover{
+	background-color: #eee;
+}
+
+/*Стилове за писане на коментар*/
+#make-comment input[type="text"] {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 7px;
+	font: 26px 'Exo 2', sans-serif;
+	width: 80%;
+}
+
+#make-comment input[type="submit"] {
+	font: 16px 'Exo 2', sans-serif;
+	margin-left: 10px;
+	padding: 5px;
+	border-radius: 7px;
+	background-color: #7d7d7d;
+}

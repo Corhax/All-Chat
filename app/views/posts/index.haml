@@ -1,16 +1,30 @@
+-# %main.container
+-#   =render 'form'
+-#
+-#
+-#   - @posts.each do |post|
+-#     %article
+-#       %span
+-#         = link_to post.user.email, user_path(post.user)
+-#         %span= post.created_at.strftime('%A, %B %d')
+-#         %br
+-#         = link_to post.body, post_path(post)
+-#
+-#
+-#
+-# %footer
+-#   %p Some Footer EOOD 2017
+
 %main.container
   =render 'form'
-
-
-  - @posts.each do |post|
+  / Вече публикувани постове
+  -@posts.each do |post|
     %article
-      %span
-        = link_to post.user.email, user_path(post.user)
-        %span= post.created_at.strftime('%A, %B %d')
-        %br
-        = link_to post.body, post_path(post)
-
-
+      .post-info
+        %span.author
+          = link_to post.user.first_name, user_path(post.user)
+        %span.time= post.created_at.strftime('%A, %B %d')
+      %p= link_to post.body, post_path(post)
 
 %footer
   %p Some Footer EOOD 2017

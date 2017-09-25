@@ -1,70 +1,95 @@
+/*Фоново изображение и избутване на съдържанието заради навигацията*/
 body {
-	background: image-url("index.jpg") no-repeat fixed center;
+	background: image-url("background/index.jpg") no-repeat fixed center;
 	background-size: cover;
 	overflow-x: hidden;
 	font-family: 'Exo 2', sans-serif;
-	padding-top: 70px;
+	padding-top: 150px;
 }
 
+/*Стилове за навигацията*/
 nav {
-	background-image: image-url("nav.jpg");
+	background-image: image-url("background/nav.jpg");
+	border-bottom: 7px solid darkred;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 10px;
-	height: 40px;
+	height: 140px;
 	font-size: 24px;
 }
 
-nav input {
-	border: none;
-	background-color: white;
-	font: 20px 'Exo 2', sans-serif;
-	padding-left: 5px;
-	width: 300px;
-}
-
-a {
-	border-radius: 5%;
-	text-decoration: none;
-	padding: 5px;
-}
-
-nav a:link, nav a:visited{
-	color: #66CCFF;
-}
-
-nav a:hover {
-	background-color: #091f8f;
-}
-
 ul li {
-	padding-left: 10px;
 	list-style-type: none;
 	display: inline-block;
 }
 
-#left-nav {
+.left-nav {
 	float: left;
-	margin: 0;
+	margin-top: 30px;
 }
 
-#right-nav {
-	margin: 0;
+a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 60px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-left: 20px;
+	color: black;
+}
+
+.search-field {
+	margin-top: 30px;
+	padding: 20px;
+	background-color: #afafaf;
+	border-radius: 5px;
+	opacity: 0.6;
+}
+
+.search-field input{
+	font-size: 24px;
+	width: 90%;
+	padding: 0 10px;
+	border-radius: 7px;
+}
+
+.right-nav {
 	float: right;
-	padding-right: 20px;
+	width: 200px;
+	margin: 20px 50px 0 0;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: #afafaf;
+	opacity: 0.6;
 }
 
-#avatar {
-	width: 30px;
-	height: 30px;
+table th {
+	padding: 10px;
+	font-size: 20px;
 }
 
-#logout {
-	background-color: inherit;
+.name {
+	color: darkred;
+	font-weight: bold;
 }
 
+.logout {
+	border-radius: 10px;
+	border: none;
+	font-size: 20px;
+	color: black;
+}
+
+.avatar {
+	width: 70px;
+	height: 70px;
+	background-color: white;
+}
+
+/*Главното съдържание, уникално за всеки html*/
 main {
 	background-color: white;
 	padding: 10px;
@@ -76,70 +101,67 @@ main {
 	width: 60%;
 }
 
+/*Писане на нов пост*/
+textarea {
+	background-color: #e4e3e3;
+	width: 99%;
+	height: 100px;
+	font: 24px 'Exo 2', sans-serif;
+	resize: none;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 5px;
+	outline: none;
+}
+
+.post-button {
+	font: 18px 'Exo 2', sans-serif;
+	color: black;
+	background-color: gray;
+	margin: 0 0 10px 5px;
+	padding: 2px 10px;
+	border-radius: 7px;
+}
+
+/*Вече публикувани постове*/
 article {
 	border: 1px solid black;
 	border-radius: 1%;
 	font-size: 30px;
-	margin: 10px;
+	margin: 5px;
+}
+
+.post-info {
+	height: 40px;
+	background-color: #7d7d7d;
+	border-bottom: 4px solid darkred;
+	clear: both;
+}
+
+span {
+	display: block;
+	margin-right: 10px;
+	font-size: 22px;
 	padding: 5px;
 }
 
-article span {
-	margin-right: 10px;
-	font-size: 20px;
+.author {
+	float: left;
 }
 
-article a:link, article a:visited, .comment a:link, .comment a:visited {
+.time {
+	float: right;
+}
+
+article a:link, article a:visited {
 	color: black;
 }
 
-article p {
+p {
 	margin: 10px 0;
 }
 
-.count {
-	margin-left: 10px;
-	font-size: 18px;
-}
-
-.comment {
-	border: 1px solid black;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding: 5px;
-}
-
-.comment p {
-	margin-top: 10px;
-}
-
-.comment span {
-	font-size: 14px;
-	margin-right: 10px;
-}
-
-.post-buttons {
-	cursor: pointer;
-	float: right;
-	padding: 10px;
-}
-
-.post-buttons a:hover{
-	background-color: #eee;
-}
-
-input[type="text"] {
-	display: block;
-	margin: 10px;
-	font: 18px 'Exo 2', sans-serif;
-	width: 97%;
-}
-
-input[type="submit"] {
-	font: 16px 'Exo 2', sans-serif;
-	margin-left: 10px;
-}
-
+/*Footer*/
 footer {
 	text-align: center;
 	padding: 10px;

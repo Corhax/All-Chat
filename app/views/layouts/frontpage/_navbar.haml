@@ -1,18 +1,19 @@
 -if user_signed_in?
-  %nav.navbar
-    %ul#left-nav
-      %li
-        = render 'posts/search'
-      %li
-        = link_to "Home", root_path
-      %li
-        = link_to "All users", users_path
+  %nav
+    .container-fluid
+      .row
+        .col-md-3.left-nav
+          %h1= link_to "AllChat", root_path, {:style=>'color:#000;', :class => "css_class"}
+        .col-md-5.search-field
+          = render 'posts/search'
+        .col-md-4
+          .right-nav
+            %table
+              %tr
+                %th{:rowspan => "2"}
+                  %img.avatar{:src => ""}/
+                %td.name= link_to current_user.first_name, user_path(current_user)
+              %tr
+                %td
 
-    %ul#right-nav
-      %li
-        = link_to current_user.first_name, user_path(current_user)
-      %li
-        %a{:href => "#"}
-          %img#avatar{:alt => "avatar", :src => ""}/
-      %li
-        = link_to "Log out", destroy_user_session_path, method: :delete
+                  = link_to "Log out", destroy_user_session_path, method: :delete

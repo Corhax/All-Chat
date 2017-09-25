@@ -1,23 +1,40 @@
-.comment
-  %span
-  = link_to comment.user.email, user_path(comment.user)
-  %span Time posted
+-# .comment
+-#   %span
+-#   = link_to comment.user.email, user_path(comment.user)
+-#   %span Time posted
+-#   %br
+-#
+-#   = comment.body
+-#
+-#   - if can? :update, comment
+-#     %span.post-buttons
+-#       = link_to "Edit", edit_post_comment_path(comment.post, comment)
+-#
+-#   - if can? :destroy, comment
+-#     %span.post-buttons
+-#       = link_to "Delete", [comment.post, comment], method: :delete,
+-#       data: { confirm: "Are you sure?" }
+-#
+-#
+
+
+
+  %br
   %br
 
+.comment
+  %figure
+    %img.comment-avatar
+      =image_tag("background/avatar")
+  %span.comment-info
+    %span.author
+      = link_to comment.user.first_name, user_path(comment.user)
+    %span.time= @post.created_at.strftime('%A, %B %d')
   = comment.body
-
-  - if can? :update, comment
-    %span.post-buttons
+  %br
+  %span.post-buttons
+    - if can? :update, comment
       = link_to "Edit", edit_post_comment_path(comment.post, comment)
-
-  - if can? :destroy, comment
-    %span.post-buttons
+    - if can? :destroy, comment
       = link_to "Delete", [comment.post, comment], method: :delete,
       data: { confirm: "Are you sure?" }
-
-
-
-
-
-  %br
-  %br
