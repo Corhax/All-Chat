@@ -24,8 +24,7 @@
 
 .comment
   %figure
-    %img.comment-avatar
-      =image_tag("background/avatar")
+    =image_tag("background/avatar")
   %span.comment-info
     %span.author
       = link_to comment.user.first_name, user_path(comment.user)
