@@ -10,11 +10,6 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
-
-  def cache_dir
-    "#{Rails.root}/tmp/uploads"
-  end
-
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
@@ -36,7 +31,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process resize_to_fit: [70, 70]
+    process resize_to_fit: [80, 80]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
