@@ -11,7 +11,10 @@
             %table
               %tr
                 %th{:rowspan => "2"}
-                  %img.avatar{:src => ""}/
+                  -if current_user.avatar?
+                    = image_tag current_user.avatar.url(:thumb)
+                  -else
+                    =image_tag("background/avatar", width: '70px')
                 %td.name= link_to current_user.first_name, user_path(current_user)
               %tr
                 %td

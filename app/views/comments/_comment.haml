@@ -24,7 +24,10 @@
 
 .comment
   %figure
-    =image_tag("background/avatar")
+    -if comment.user.avatar?
+      = image_tag comment.user.avatar.url(:thumb)
+    -else
+      =image_tag("background/avatar")
   %span.comment-info
     %span.author
       = link_to comment.user.first_name, user_path(comment.user)
