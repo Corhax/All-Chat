@@ -1,6 +1,6 @@
 /*Фоново изображение и избутване на съдържанието заради навигацията*/
 body {
-	background: image-url("background/index.jpg") no-repeat fixed center;
+	background: url("background/index.jpg") no-repeat fixed center;
 	background-size: cover;
 	overflow-x: hidden;
 	font-family: 'Exo 2', sans-serif;
@@ -9,7 +9,7 @@ body {
 
 /*Стилове за навигацията*/
 nav {
-	background-image: image-url("background/nav.jpg");
+	background-image: url("background/nav.jpg");
 	border-bottom: 7px solid darkred;
 	position: fixed;
 	top: 0;
@@ -36,12 +36,12 @@ a:hover {
 h1 {
 	font-size: 60px;
 	font-weight: bold;
-	margin-top: 0;
-	margin-left: 20px;
+	margin: 0 0 0 20px;
 	color: black;
 }
 
 .search-field {
+	width: 85%;
 	margin-top: 30px;
 	padding: 20px;
 	background-color: #afafaf;
@@ -71,6 +71,12 @@ table th {
 	font-size: 20px;
 }
 
+.avatar {
+	width: 70px;
+	height: 70px;
+	background-color: white;
+}
+
 .name {
 	color: darkred;
 	font-weight: bold;
@@ -81,12 +87,6 @@ table th {
 	border: none;
 	font-size: 20px;
 	color: black;
-}
-
-.avatar {
-	width: 70px;
-	height: 70px;
-	background-color: white;
 }
 
 /*Главното съдържание, уникално за всеки html*/
@@ -170,4 +170,173 @@ footer {
 footer p {
 	font-size: 24px;
 	color: blue;
+}
+
+/*Responsive design*/
+@media screen and (max-width: 991px) {
+	/*Само навигация*/
+	h1 {
+		font-size: 40px;
+		margin-top: 20px;
+	}
+
+	.right-nav {
+		margin: 20px 10px 0 0;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	/*Навигация*/
+	body {
+		padding-top: 110px;
+	}
+
+	nav {
+		height: 100px;
+	}
+
+	h1 {
+		font-size: 30px;
+		margin : 0 0 0 0;
+	}
+
+	.search-field {
+		width: 90%;
+		margin: 10px 0 0 0;
+	}
+
+	.search-field input {
+		font-size: 18px;
+	}
+
+	.right-nav {
+		width: 150px;
+		margin: 10px 20px 0 0;
+		padding: 0;
+	}
+
+	.avatar {
+		width: 50px;
+		height: 50px
+	}
+
+	.name {
+		font-size: 16px;
+	}
+	.logout {
+		font-size: 16px;
+	}
+
+	/*Main*/
+	textarea {
+		font-size: 20px;
+	}
+
+	.post-button {
+		font-size: 16px;
+	}
+
+	span {
+		font-size: 18px;
+	}
+
+	article {
+		font-size: 20px;
+	}
+
+}
+
+@media screen and (max-width: 580px) {
+	/*Навигация*/
+	.search-field {
+		width: 95%;
+		height: 50px;
+		margin: 25px 0 0 0;
+		padding: 5px;
+	}
+
+	.search-field input{
+		padding-left: 5px;
+	}
+
+	.right-nav {
+		margin: 15px 0 0 0;
+		width: 130px;
+	}
+
+	.name {
+		font-size: 14px;
+	}
+
+	.logout {
+		font-size: 14px;
+	}
+	/*Main*/
+	textarea {
+		font-size: 16px;
+	}
+
+	.post-button {
+		font-size: 12px;
+	}
+
+	span {
+		font-size: 16px;
+	}
+
+	article {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/*Само навигация*/
+	body {
+		padding-top: 70px;
+	}
+
+	nav {
+		height: 60px;
+		border-bottom: 3px solid darkred;
+	}
+
+	.left-nav {
+		margin: 10px 0 0 0;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	.search-field {
+		height: 40px;
+		margin: 4px 0 0 0;
+	}
+
+	.search-field {
+		font-size: 14px;
+	}
+
+	.right-nav {
+		width: 110px;
+		margin: 0 0 0 0;
+	}
+
+	table th{
+		padding: 6px;
+	}
+
+	.avatar {
+		width: 35px;
+		height: 35px;
+	}
+
+	.name{
+		font-size: 14px;
+	}
+
+	.logout {
+		padding: 0 4px;
+		font-size: 14px;
+	}
 }

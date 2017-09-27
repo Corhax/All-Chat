@@ -4,9 +4,10 @@
       .row
         .col-md-3.left-nav
           %h1= link_to "AllChat", root_path, {:style=>'color:#000;', :class => "css_class"}
-        .col-md-5.search-field
-          = render 'posts/search'
-        .col-md-4
+        .col-xs-5
+          .search-field
+            = render 'posts/search'
+        .col-xs-4
           .right-nav
             %table
               %tr
@@ -18,5 +19,5 @@
                 %td.name= link_to current_user.first_name, user_path(current_user)
               %tr
                 %td
-
-                  = link_to "Log out", destroy_user_session_path, method: :delete
+                  %button.logout
+                    = link_to "Log out", destroy_user_session_path, method: :delete

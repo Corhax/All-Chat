@@ -80,6 +80,7 @@ figure img {
 	padding-left: 5px;
 	display: block;
     overflow: hidden;
+    font-size: 18px;
 }
 
 .comment span {
@@ -114,4 +115,62 @@ figure img {
 	padding: 5px;
 	border-radius: 7px;
 	background-color: #7d7d7d;
+}
+
+/*Responsive design*/
+@media screen and (max-width: 760px) {
+	article {
+		font-size: 22px;
+	}
+
+	span {
+		font-size: 18px;
+	}
+
+	figure img{
+		width: 65px;
+		height: 65px;
+	}
+
+	.comment p {
+		font-size: 14px;
+	}
+
+	#make-comment input[type="text"] {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	article {
+		font-size: 16px;
+	}
+
+	figure img {
+		width: 45px;
+		height: 45px;
+	}
+
+	.comment-info {
+		height: 45px;
+	}
+
+	.comment span {
+		font-size: 12px;
+		padding: 5px;
+	}
+
+	.comment p {
+		font-size: 12px;
+	}
+
+	#make-comment input[type="text"] {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	span {
+		font-size: 14px;
+	}
 }
