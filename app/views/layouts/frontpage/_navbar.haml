@@ -19,5 +19,4 @@
                 %td.name= link_to current_user.first_name, user_path(current_user)
               %tr
                 %td
-                  %button.logout
-                    = link_to "Log out", destroy_user_session_path, method: :delete
+                  = link_to "Log out", destroy_user_session_path, method: :delete
