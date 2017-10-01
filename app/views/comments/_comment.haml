@@ -25,7 +25,7 @@
 .comment
   %figure
     -if comment.user.avatar?
-      = image_tag comment.user.avatar.url(:thumb)
+      = image_tag comment.user.avatar.url(:thumb).to_s
     -else
       =image_tag("background/avatar")
   %span.comment-info

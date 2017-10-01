@@ -11,8 +11,9 @@
 
 
 %main.container
-  %h1.user-posts Posts by:
-  %p= @user.email
+  %h3 About Me
+  = current_user.about
+  %h3.user-posts My posts
   -if current_user == @user
     %p= link_to "Edit profile", edit_user_registration_path
   / Всички постове на потребителя един след друг
@@ -20,8 +21,7 @@
     %article
       %span
         =@user.email
-      %span= post.created_at.strftime('%A, %B %d')
-      %br
+        = post.created_at.strftime('%A, %B %d')
       = post.body
 
       %span.show-post
