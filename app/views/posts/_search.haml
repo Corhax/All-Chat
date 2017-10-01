@@ -1,3 +1,7 @@
 = form_tag search_results_path, method: 'get' do
-  = text_field_tag :search_keywords
+  = text_field_tag :search_keywords,  nil, :placeholder => "Search posts..."
+
   -# = submit_tag "Search"
+-#
+-# <%= text_field_tag "search", nil, :placeholder => 'Enter search term...' %>
+-# <%= text_field_tag "search", 'Enter search term...' %>
