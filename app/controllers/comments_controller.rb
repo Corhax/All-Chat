@@ -12,6 +12,8 @@ class CommentsController < ApplicationController
 
     if @comment.save
       redirect_to post_path(@post)
+    else
+      redirect_to post_path(@post)
     end
   end
 

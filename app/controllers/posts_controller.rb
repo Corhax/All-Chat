@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path, notice: "Post was succesfuly created"
     else
-      render 'new', notice: "Something went wrong!"
+      redirect_to root_path
     end
   end
 
