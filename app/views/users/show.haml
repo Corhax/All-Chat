@@ -1,31 +1,111 @@
--# = @user.email
--# %br
--# %br
--#
--# %p Posted:
--#
--# - @user.posts.each do |post|
--#   %br
--#   %br
--#   = link_to post.body, post
-
-
-%main.container
-  - if @user.about != nil
-    %h3 About Me
+%section.profile
+  %p.section-title My Profile
+  %ul.wrapper
+    %li
+      %figure.profile-pic
+        -if @user.avatar?
+          = image_tag (@user.avatar.url.to_s)
+        -else
+          =image_tag("background/avatar")
+    %li
+      %ul.profile-info
+        %li= @user.first_name
+        %li= @user.birthday
+        %li City
+        %li= @user.email
+    %li.username
+      %p Username
+  %br
+  .profile-description
     = @user.about
-  %h3.user-posts My posts
-  -if current_user == @user
-    %p= link_to "Edit profile", edit_user_registration_path
-  / Всички постове на потребителя един след друг
+%section.posts
+  %p.section-title My posts:
   - @user.posts.each do |post|
-    %article
-      %span
-        =@user.email
-        = post.created_at.strftime('%A, %B %d')
-      = post.body
+    .posts-container
+      %article.post
+        .post-info
+          %span.author
+            =@user.email
+          %span.time= post.created_at.strftime('%A, %B %d')
+        = post.body
 
-      %span.show-post
-        = link_to "Open Post", post
-        %br
-        %br
+-# %section.profile
+-#   %p.section-title My profile
+-#   %ul.wrapper
+-#     %li
+-#       %figure.profile-pic
+-#         %img{:src => ""}/
+-#     %li
+-#       %ul.profile-info
+-#         %li Sasho Roman
+-#         %li Age: 63
+-#         %li City: Koynare
+-#         %li email: uchastiqSashoRoman@abv.bg
+-#     %li.username Username
+-#   %br/
+-#   .profile-description
+-#     Some description. description description description description description description description description description description description description
+-# %section.posts
+-#   %p.section-title My posts
+-#   .posts-container
+-#     %article.post
+-#       .post-info
+-#         %span.author
+-#           %a{:href => ""} Author
+-#         %span.time Time posted
+-#       %figure.post-avatar
+-#         %img{:src => ""}/
+-#       %p Lorem ipsum dolor sit amet, priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet
+-#     %article.post
+-#       .post-info
+-#         %span.author
+-#           %a{:href => ""} Author
+-#         %span.time Time posted
+-#       %figure.post-avatar
+-#         %img{:src => ""}/
+-#       %p Lorem ipsum dolor sit amet, priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet
+-#     %article.post
+-#       .post-info
+-#         %span.author
+-#           %a{:href => ""} Author
+-#         %span.time Time posted
+-#       %figure.post-avatar
+-#         %img{:src => ""}/
+-#       %p Lorem ipsum dolor sit amet, priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet
+-#     %article.post
+-#       .post-info
+-#         %span.author
+-#           %a{:href => ""} Author
+-#         %span.time Time posted
+-#       %figure.post-avatar
+-#         %img{:src => ""}/
+-#       %p Lorem ipsum dolor sit amet, priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet
+-#     %article.post
+-#       .post-info
+-#         %span.author
+-#           %a{:href => ""} Author
+-#         %span.time Time posted
+-#       %figure.post-avatar
+-#         %img{:src => ""}/
+-#       %p Lorem ipsum dolor sit amet, priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet priLorem ipsum dolor sit amet, priLorem ipsum dolor sit amet
+
+-# -----------------------------------------------
+-# %main.container
+-#   - if @user.about != nil
+-#     %h3 About Me
+-#     = @user.about
+-#   %h3.user-posts My posts
+-#   -if current_user == @user
+-#     %p= link_to "Edit profile", edit_user_registration_path
+-#   / Всички постове на потребителя един след друг
+-#   - @user.posts.each do |post|
+-#     %article
+-#       %span
+-#         =@user.email
+-#         = post.created_at.strftime('%A, %B %d')
+-#       = post.body
+-#
+-#       %span.show-post
+-#         = link_to "Open Post", post
+-#         %br
+-#         %br
