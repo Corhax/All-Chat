@@ -31,7 +31,7 @@
           %span.author
             =@user.email
           %span.time= post.created_at.strftime('%A, %B %d')
-        = post.body
+        = link_to post.body, post_path(post)
 
 -# %section.profile
 -#   %p.section-title My profile
