@@ -9,9 +9,13 @@
           =image_tag("background/avatar")
     %li
       %ul.profile-info
+        %li Name:
         %li= @user.first_name
+        %br
+        %li Birthday:
         %li= @user.birthday
-        %li City
+        %br
+        %li Email:
         %li= @user.email
     %li.username
       %p Username
@@ -19,8 +23,8 @@
   .profile-description
     = @user.about
 %section.posts
-  %p.section-title My posts:
-  - @user.posts.each do |post|
+  %p.section-title Resent Posts:
+  - @posts.each do |post|
     .posts-container
       %article.post
         .post-info

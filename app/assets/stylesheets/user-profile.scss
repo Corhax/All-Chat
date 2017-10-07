@@ -91,13 +91,13 @@ table th {
 	border-radius: 5px;
 }
 
-.profile-info {
+ul .profile-info {
 	list-style-type: none;
 	overflow: auto;
 	word-break: break-all;
 }
 
-.profile-info li {
+ul .profile-info li {
 	padding: 10px 5px;
 	font-size: 22px;
 }
@@ -171,7 +171,7 @@ table th {
 		height: 170px;
 	}
 
-	.profile-info li{
+	ul.profile-info li{
 		font-size: 16px;
 	}
 
@@ -201,7 +201,7 @@ table th {
 		height: 120px;
 	}
 
-	.profile-info li{
+	ul.profile-info li{
 		font-size: 14px;
 		padding: 4px 0;
 	}
@@ -227,7 +227,7 @@ table th {
 		font-size: 20px;
 	}
 
-	.profile-info {
+ ul.profile-info {
 		padding: 0 2px;
 	}
 
@@ -250,7 +250,7 @@ table th {
 		height: 100px;
 	}
 
-	.profile-info li{
+	ul.profile-info li{
 		font-size: 12px;
 		padding: 1px;
 	}

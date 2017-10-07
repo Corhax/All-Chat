@@ -7,6 +7,7 @@ end
 
 def show
   @user = User.friendly.find(params[:id])
+  @posts = Post.all.limit(3).order("created_at DESC")
 end
 
 
